@@ -12,7 +12,7 @@
           ></v-text-field>
         </v-col>
         <v-col cols="12" md="8" class="">
-          <div class="d-flex justify-end">
+          <div class="d-flex justify-start justify-md-end">
             <div class="filterInput">
               <v-select
                 :items="region"
