@@ -4,7 +4,7 @@ export default {
 
         }
     },
-    gettur: {
+    getters: {
 
     },
     mutations: {
@@ -16,12 +16,35 @@ export default {
                 url: "/all"
             })
             .then((res) => {
-                return res.data
+                return res.data;
             })
             .catch((err) => {
-                return false
+                return false;
             })
-        }
+        },
+        searchCountry({commit}, payload) {
+            return this.$axios({
+                url: `/name/${payload}`
+            })
+            .then((res) => {
+                return res.data;
+            })
+            .catch((err) => {
+                return false;
+            })
+
+        },
+        filterByRegion({commit}, payload) {
+            return this.$axios({
+                url: `/region/${payload}`
+            })
+            .then((res) => {
+                return res.data;
+            })
+            .catch((err) => {
+                return false;
+            })
+        },
 
     }
 }
